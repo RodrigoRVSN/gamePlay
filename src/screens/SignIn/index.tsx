@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { View, Text, Image, StatusBar, Button } from "react-native";
+import React from "react";
+import { View, Text, Image } from "react-native";
 
 import { styles } from "./styles";
 
@@ -10,11 +10,6 @@ export function SignIn() {
   return (
     <>
       <View style={styles.container}>
-        <StatusBar
-          barStyle="light-content"
-          backgroundColor="transparent"
-          translucent
-        />
         <Image
           source={illustration}
           style={styles.image}
@@ -25,8 +20,7 @@ export function SignIn() {
             Conecte-se e organize suas gameplays!
           </Text>
           <Text style={styles.subtitle}>
-            Crie grupos para jogar {"\n"} seus games favoritos {"\n"} com seus
-            amigos
+            Crie grupos para jogar seus {"\n"} games favoritos com seus amigos
           </Text>
           <ButtonIcon title="Entrar com Discord" activeOpacity={0.8} />
         </View>
