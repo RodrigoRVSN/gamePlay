@@ -5,8 +5,15 @@ import { styles } from "./styles";
 
 import illustration from "../../assets/illustration.png";
 import { ButtonIcon } from "../../components/ButtonIcon";
+import { useNavigation } from "@react-navigation/native";
 
 export function SignIn() {
+  const navigation = useNavigation();
+
+  function handleSingIn() {
+    navigation.navigate("Home");
+  }
+
   return (
     <>
       <View style={styles.container}>
@@ -22,7 +29,7 @@ export function SignIn() {
           <Text style={styles.subtitle}>
             Crie grupos para jogar seus {"\n"} games favoritos com seus amigos
           </Text>
-          <ButtonIcon title="Entrar com Discord" activeOpacity={0.8} />
+          <ButtonIcon onPress={handleSingIn} title="Entrar com Discord" />
         </View>
       </View>
     </>
