@@ -4,6 +4,7 @@ import { View, Text, Image, Alert, ActivityIndicator } from "react-native";
 import { styles } from "./styles";
 
 import illustration from "../../assets/illustration.png";
+
 import { ButtonIcon } from "../../components/ButtonIcon";
 
 import { Background } from "../../components/Background";
@@ -17,7 +18,7 @@ export function SignIn() {
     try {
       await signIn();
     } catch (error) {
-      Alert.alert("a");
+      Alert.alert("Erro ao fazer login");
     }
   }
 
