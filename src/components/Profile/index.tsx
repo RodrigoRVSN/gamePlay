@@ -6,11 +6,11 @@ import { Avatar } from "../Avatar";
 import { styles } from "./styles";
 
 export function Profile() {
-  const { user, signOut } = useAuth();
+  const { user } = useAuth();
 
   return (
     <View style={styles.container}>
-      <RectButton onPress={signOut}>
+      <RectButton>
         <Avatar urlImage={user.avatar} />
       </RectButton>
 

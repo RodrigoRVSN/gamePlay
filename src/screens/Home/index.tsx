@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { View, FlatList } from "react-native";
 import { useFocusEffect, useNavigation } from "@react-navigation/native";
 
@@ -8,13 +8,13 @@ import { ListDivider } from "../../components/ListDivider";
 import { ListHeader } from "../../components/ListHeader";
 import { Background } from "../../components/Background";
 import { ButtonAdd } from "../../components/ButtonAdd";
+import { ButtonLogout } from "../../components/ButtonLogout";
 import { Profile } from "../../components/Profile";
 
 import { styles } from "./styles";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { COLLECTION_APPOINTMENTS } from "../../configs/database";
 import { Load } from "../../components/Load";
-import { useCallback } from "react";
 
 export function Home() {
   const [category, setCategory] = useState("");
@@ -58,6 +58,7 @@ export function Home() {
     <Background>
       <View style={styles.header}>
         <Profile />
+        <ButtonLogout onPress={handleAppointmentCreate} />
         <ButtonAdd onPress={handleAppointmentCreate} />
       </View>
 
